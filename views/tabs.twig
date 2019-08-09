@@ -56,8 +56,8 @@
 																						<ul>
 																							<li><a href="#section-1" class="icon-shop"><i class="lnr lnr-briefcase"></i> <span>FIXE</span></a></li>
 																							<li><a href="#section-2" class="icon-cup"><i class="far fa-calendar"></i> <span>SEMAINE</span></a></li>
-																							<li><a href="#section-3" class="icon-food"><i class="fa fa-utensils"></i> <span>Accomp 1</span></a></li>
-																							<li><a href="#section-4" class="icon-lab"><i class="fa fa-flask"></i> <span>Accomp 2</span></a></li>
+																							<li><a href="#section-3" class="icon-food"><i class="fa fa-utensils"></i> <span>SUPPLEMENTS</span></a></li>
+																							<li><a href="#section-4" class="icon-lab"><i class="fa fa-flask"></i> <span>ACCOMPAGNEMENT</span></a></li>
 																							<li><a href="#section-5" class="icon-truck"><i class="fa fa-beer"></i> <span>Boisson</span></a></li>
 																						</ul>
 																					</nav>
@@ -96,14 +96,14 @@
                                                                                                               <div class="modal-body">
                                                                                                                   <div class="row">
                                                                                                                       <div class="col-md-6">
-                                                                                                                          <h2>List des Suplements</h2>
+                                                                                                                          <h2>List des Suppléments</h2>
                                                                                                                           {% for items in item.accompagement %}
                                                                                                                               <p class="metric">{{items.accomp.name}}</p>
                                                                                                                           {% endfor %}
                                                                                                                       </div>
                                                                                                                       <div class="col-md-6">
-                                                                                                                          <h2>Ajouter Un Suplement</h2>
-                                                                                                                          <select id="SuplementFixe" class="form-control"  multiple="multiple" style="display: none;">
+                                                                                                                          <h2>Ajouter Un Supplément</h2>
+                                                                                                                          <select class="form-control SuplementFixe"  multiple="multiple" style="display: none;">
                                                                                                                               {% for item in info.Accompa  %}
                                                                                                                                   <option value="{{item.name}}">{{item.name}}</option>
                                                                                                                               {% endfor %}
@@ -185,7 +185,7 @@
                                                                                                                                                                                                                       <div class="modal-body">
                                                                                                                                                                                                                           <div class="row">
                                                                                                                                                                                                                               <div class="col-md-6">
-                                                                                                                                                                                                                                  <h2>List des Suplements</h2>
+                                                                                                                                                                                                                                  <h2>Liste des Suppléments</h2>
                                                                                                                                                                                                                                   {% for items in item.accompagement %}
                                                                                                                                                                                                                                       {% if  items.accomp.etat == 1%}
                                                                                                                                                                                                                                           <p class="metric">{{items.accomp.name}}</p>
@@ -194,7 +194,7 @@
                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                               <div class="col-md-6">
                                                                                                                                                                                                                                   <h2>Ajouter Un Suplement</h2>
-                                                                                                                                                                                                                                  <select id="Suplement" class="form-control"  multiple="multiple" style="display: none;">
+                                                                                                                                                                                                                                  <select  class="form-control Suplement"  multiple="multiple" style="display: none;">
                                                                                                                                                                                                                                       {% for item in info.Accompa  %}
                                                                                                                                                                                                                                           <option value="{{item.name}}">{{item.name}}</option>
                                                                                                                                                                                                                                       {% endfor %}
@@ -204,7 +204,7 @@
                                                                                                                                                                                                                           </div>
                                                                                                                                                                                                                           <div class="row">
                                                                                                                                                                                                                               <div class="col-md-6">
-                                                                                                                                                                                                                                  <h2>List des Accompagnements</h2>
+                                                                                                                                                                                                                                  <h2>Liste des Accompagnements</h2>
                                                                                                                                                                                                                                   {% for items in item.accompagement %}
                                                                                                                                                                                                                                       {% if  items.accomp.etat == 2%}
                                                                                                                                                                                                                                       <p class="metric">{{items.accomp.name}}</p>
@@ -214,7 +214,7 @@
                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                               <div class="col-md-6">
                                                                                                                                                                                                                                   <h2>Ajouter Un Accompagnement</h2>
-                                                                                                                                                                                                                                  <select id="Accompagnements" class="form-control"  multiple="multiple" style="display: none;">
+                                                                                                                                                                                                                                  <select class="form-control Accompagnements"  multiple="multiple" style="display: none;">
                                                                                                                                                                                                                                       {% for item in info.Accompagnement  %}
                                                                                                                                                                                                                                           <option value="{{item.name}}">{{item.name}}</option>
                                                                                                                                                                                                                                       {% endfor %}
@@ -480,7 +480,15 @@
                                     $(this).parent().fadeOut(1000);
                                 })
                                 $('.SuplementBut').click(function () {
-                                    socket.emit("semaineAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$('#Accompagnements').val(),Suplement:$('#Suplement').val() })
+                                    socket.emit("semaineAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.Accompagnements').val(),Suplement:$(this).parent().parent().find('select.Suplement').val() })
+                                    $(this).fadeOut(1700);
+                                    window.location.href = "/cantine";
+                                    //console.log("supplementSemaine", $('#Accompagnements').val(), $('#Suplement').val())
+
+                                })
+                                $('.SuplementFixeBut').click(function () {
+                                    socket.emit("fixeAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.SuplementFixe').val()})
+                                    $(this).fadeOut(1700);
                                     window.location.href = "/cantine";
                                     //console.log("supplementSemaine", $('#Accompagnements').val(), $('#Suplement').val())
 

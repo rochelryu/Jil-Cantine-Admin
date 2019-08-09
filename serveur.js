@@ -95,9 +95,7 @@ api.get('/cantine', async (req, res)=>{
     if(req.session.Pharma){
         let info = {};
         const PlatFixe = await Administration.getAllPlatByType(1);
-        console.log(PlatFixe)
         const PlatSemaine = await Administration.getAllPlatByType(2);
-        console.log(JSON.stringify(PlatSemaine[0].accompagement))
         const Accompa = await Administration.getAllAccompagnementByType(1);
         const Accompagnement = await Administration.getAllAccompagnementByType(2);
         const Boisson = await Administration.getAllAccompagnementByType(3);
@@ -401,6 +399,7 @@ io.on('connection', (socket)=> {
         let del = await Administration.delAPlat(data);
     })
     socket.on('semaineAjouComp', async (data)=>{
+
         for(let i in data.Accompagnement){
             const update = await Administration.updatePlatAccomp(data.plat, data.Accompagnement[i]);
         }
@@ -408,6 +407,12 @@ io.on('connection', (socket)=> {
             const update = await Administration.updatePlatAccomp(data.plat, data.Suplement[j]);
         }
     })
+
+    socket.on('fixeAjouComp', async (data)=>{
+        for(let i in data.Accompagnement){
+            const update = await Administration.updatePlatAccomp(data.plat, data.Accompagnement[i]);
+        }
+    });
     socket.on("viewInWait", async data=>{
         let block = [];
 
