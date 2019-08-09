@@ -247,7 +247,7 @@ apiMobile.post('/signin', async (req, res) =>{
         }
     }
 })
-apiMobile.post('/commande', async (req, res) =>{
+apiMobile.post('/commande/:id', async (req, res) =>{
     if(req.session.Pharma){
         req.check('platId', "plat Invalide").notEmpty();
         req.check('price', "prix Invalide").notEmpty();
@@ -259,7 +259,7 @@ apiMobile.post('/commande', async (req, res) =>{
             res.send({statue:false, error:error});
         }
         else{
-            let id = req.session.Pharma._id;
+            let id = req.params.id;
             let price = req.body.price;
             let platId = req.body.platId;
             let contain = req.body.contain;

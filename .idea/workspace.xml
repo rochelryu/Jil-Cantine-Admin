@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3921b0b3-60a3-4bec-9f01-a19ea6cde0e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/images/Fixe/1565380069576_Sauce Feuille.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serveur.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tabs.twig" beforeDir="false" afterPath="$PROJECT_DIR$/views/tabs.twig" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,26 +19,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serveur.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="99" column="63" lean-forward="true" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
+            <state relative-caret-position="84">
+              <caret line="357" column="47" selection-start-line="357" selection-start-column="47" selection-end-line="357" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/tabs.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="59" column="182" selection-start-line="59" selection-start-column="182" selection-end-line="59" selection-end-column="182" />
+            <state relative-caret-position="164">
+              <caret line="62" column="90" selection-start-line="62" selection-start-column="90" selection-end-line="62" selection-end-column="90" />
               <folding>
                 <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -53,24 +42,6 @@
                 <element signature="n#style#0;n#select#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="189" column="89" lean-forward="true" selection-start-line="189" selection-start-column="89" selection-end-line="189" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -102,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="114">
+              <caret line="222" column="29" lean-forward="true" selection-start-line="222" selection-start-column="29" selection-end-line="222" selection-end-column="29" />
               <folding>
                 <element signature="e#647#1032#0" />
                 <element signature="e#9993#10009#0" />
@@ -119,10 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#fixe</find>
-      <find>modal-bod</find>
-      <find>Accom</find>
-      <find>modal-dia</find>
       <find>accompa</find>
       <find>accompagemen</find>
       <find>modal-b</find>
@@ -149,6 +116,10 @@
       <find>semaineAjouComp</find>
       <find>suplement</find>
       <find>List</find>
+      <find>Accomp 1</find>
+      <find>apiM</find>
+      <find>comm</find>
+      <find>apiMobile</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,15 +134,15 @@
         <option value="$PROJECT_DIR$/views/login.twig" />
         <option value="$PROJECT_DIR$/views/index.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/serveur.js" />
         <option value="$PROJECT_DIR$/views/tabs.twig" />
+        <option value="$PROJECT_DIR$/serveur.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
+    <option name="x" value="527" />
     <option name="y" value="47" />
-    <option name="width" value="1346" />
+    <option name="width" value="829" />
     <option name="height" value="701" />
   </component>
   <component name="ProjectView">
@@ -202,7 +173,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JilCantine" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -267,20 +238,20 @@
       <workItem from="1565367655779" duration="49000" />
       <workItem from="1565367847394" duration="175000" />
       <workItem from="1565368361542" duration="245000" />
-      <workItem from="1565368627856" duration="11983000" />
+      <workItem from="1565368627856" duration="16182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14315000" />
+    <option name="totallyTimeSpent" value="18514000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="47" width="1346" height="701" extended-state="0" />
+    <frame x="527" y="47" width="829" height="701" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7671642" visible="true" weight="0.2494331" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7671642" weight="0.40942928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.23283581" side_tool="true" visible="true" weight="0.2494331" />
+      <window_info id="npm" order="2" sideWeight="0.23283581" side_tool="true" weight="0.40942928" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -317,17 +288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#647#1032#0" />
-            <element signature="e#9993#10009#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -345,7 +305,7 @@
     <entry file="file://$PROJECT_DIR$/views/index.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="189" column="89" lean-forward="true" selection-start-line="189" selection-start-column="89" selection-end-line="189" selection-end-column="89" />
+          <caret line="189" column="89" selection-start-line="189" selection-start-column="89" selection-end-line="189" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -356,17 +316,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serveur.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="99" column="63" lean-forward="true" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/tabs.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="59" column="182" selection-start-line="59" selection-start-column="182" selection-end-line="59" selection-end-column="182" />
+        <state relative-caret-position="164">
+          <caret line="62" column="90" selection-start-line="62" selection-start-column="90" selection-end-line="62" selection-end-column="90" />
           <folding>
             <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -378,6 +331,24 @@
             <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#select#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serveur.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="357" column="47" selection-start-line="357" selection-start-column="47" selection-end-line="357" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="222" column="29" lean-forward="true" selection-start-line="222" selection-start-column="29" selection-end-line="222" selection-end-column="29" />
+          <folding>
+            <element signature="e#647#1032#0" />
+            <element signature="e#9993#10009#0" />
           </folding>
         </state>
       </provider>
