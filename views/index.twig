@@ -1,0 +1,214 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Jil Cantine | Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Jil Cantine" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<link href="css/mdb.min.css" rel='stylesheet' type='text/css' /><!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- Graph CSS -->
+<link href="css/all.min.css" rel="stylesheet">
+	<link href="css/toast.css" rel="stylesheet">
+	<!-- jQuery -->
+<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<link rel="stylesheet" href="css/datatables.min.css" type='text/css' />
+<!-- //lined-icons -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+<!--clock init-->
+<!--Easy Pie Chart-->
+<!--skycons-icons-->
+<!--//skycons-icons-->
+
+</head>
+<body>
+   <div class="page-container">
+   <!--/content-inner-->
+	<div class="left-content">
+	   <div class="inner-content">
+		<!-- header-starts -->
+						<div class="outter-wp">
+								<!--custom-widgets-->
+												<div class="container">
+												   <div class="row">
+														<div class="col-md-3 widget">
+															<div class="stats-left ">
+																<h5>Total</h5>
+																<h4> Client</h4>
+															</div>
+															<div class="stats-right">
+																<label>{{ info.NumberClient }}</label>
+															</div>
+															<div class="clearfix"> </div>
+														</div>
+														<div class="col-md-3 widget states-mdl">
+															<div class="stats-left">
+																<h5>Commande</h5>
+																<h4>Aujourd'hui</h4>
+															</div>
+															<div class="stats-right">
+																<label> {{info.NumberCommande}}</label>
+															</div>
+															<div class="clearfix"> </div>
+														</div>
+														<div class="col-md-3 widget states-thrd">
+															<div class="stats-left">
+																<h5>Total</h5>
+																<h4>Plat Fixe</h4>
+															</div>
+															<div class="stats-right">
+																<label>{{ info.NumberFixe }}</label>
+															</div>
+															<div class="clearfix"> </div>
+														</div>
+														<div class="col-md-3 widget states-last">
+															<div class="stats-left">
+																<h5>Total</h5>
+																<h4>Plat Semaine</h4>
+															</div>
+															<div class="stats-right">
+																<label>{{ info.NumberSemaine }}</label>
+															</div>
+															<div class="clearfix"> </div>
+														</div>
+													   <div class="col-md-3 widget">
+														   <div class="stats-left ">
+															   <h5>Total</h5>
+															   <h4> Accompagnement 1</h4>
+														   </div>
+														   <div class="stats-right">
+															   <label>{{ info.NumberAccomp }}</label>
+														   </div>
+														   <div class="clearfix"> </div>
+													   </div>
+													   <div class="col-md-3 widget states-mdl">
+														   <div class="stats-left">
+															   <h5>Commande</h5>
+															   <h4>Accompagnement 2</h4>
+														   </div>
+														   <div class="stats-right">
+															   <label> {{info.NumberCont}}</label>
+														   </div>
+														   <div class="clearfix"> </div>
+													   </div>
+													   <div class="col-md-3 widget states-thrd">
+														   <div class="stats-left">
+															   <h5>Total</h5>
+															   <h4>Boisson</h4>
+														   </div>
+														   <div class="stats-right">
+															   <label>{{ info.NumberBierre }}</label>
+														   </div>
+														   <div class="clearfix"> </div>
+													   </div>
+													   <div class="col-md-3 widget states-last">
+														   <div class="stats-left">
+															   <h5>Total</h5>
+															   <h4>Administrateur</h4>
+														   </div>
+														   <div class="stats-right">
+															   <label>{{ info.NumberAdmin }}</label>
+														   </div>
+														   <div class="clearfix"> </div>
+													   </div>
+
+												   </div>
+												</div>
+												<!--//custom-widgets-->
+												<!--/candile-->
+													<div class="candile">
+															<div class="candile-inner">
+																<h3 class="sub-tittle">Commande En Attente</h3>
+																<table class="display table table-hover table-striped table-bordered" style="width:100%">
+																	<thead>
+																	<tr>
+																		<th>N</th>
+																		<th>Code</th>
+																		<th>Prix</th>
+																		<th>Etablissement</th>
+																		<th>Action</th>
+																	</tr>
+																	</thead>
+																	<tbody>
+																	{% for item in info.CommandeInWait %}
+
+																		<tr class="mtn" id="{{ item._id }}" data-CliendId="{{ item.CliendId }}" data-platId="{{ item.platId }}" data-ryu="{{ item.contain }}">
+																			<td scope="row">{{ loop.index }}</td>
+																			<td>{{ item.code }}</td>
+																			<td>{{item.price}} F cfa</td>
+																			<td>{{item.ecole}}</td>
+																			<td><a class="btn btn-action fake" data-toggle="modal" data-target="#sideModalTR"><i class="far fa-eye"></i></a></td>
+																		</tr>
+																	{% endfor %}
+																	</tbody>
+																</table>
+														</div>
+
+															</div>
+
+							<div class="candile">
+								<div class="candile-inner">
+									<h3 class="sub-tittle">Commande Validé</h3>
+									<table class="display table table-hover table-striped table-bordered" id="succ" style="width:100%">
+										<thead>
+										<tr>
+											<th>N</th>
+											<th>Code</th>
+											<th>Prix</th>
+                                            <th>Etablissement</th>
+                                            <th>Action</th>
+										</tr>
+										</thead>
+										<tbody>
+										{% for item in info.CommandeSend %}
+
+											<tr class="mtn" id="{{ item._id }}" data-CliendId="{{ item.CliendId }}" data-platId="{{ item.platId }}" data-ryu="{{ item.contain }}">
+												<td scope="row">{{ loop.index }}</td>
+												<td>{{ item.code }}</td>
+												<td>{{item.price}} F cfa</td>
+												<td>{{item.ecole}}</td>
+												<td><a class="btn btn-action fake" data-toggle="modal" data-target="#sideModalTR"><i class="far fa-eye"></i></a></td>
+											</tr>
+										{% endfor %}
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+
+														</div>
+
+									</div>
+									 <!--footer section start-->
+										<footer>
+										   <p>&copy 2019 Jil Cantine . Tout Droit reservé </p>
+										</footer>
+								</div>
+							</div>
+
+   {% include 'partials/sidemenu.twig' %}
+	{#
+
+	ici on colle
+
+
+	#}
+
+   <script src="js/datatables.min.js"></script>
+   <script>
+	   $(document).ready(function () {
+		   $('.table-bordered').DataTable({
+			   "dom": '<"toolbar">frtip',
+			   "paging": true,
+			   "pagingType": "full_numbers"
+		   });
+	   })
+   </script>
+</body>
+</html>

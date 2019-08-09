@@ -1,0 +1,95 @@
+<div class="sidebar-menu">
+    <header class="logo">
+        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.twig"> <span id="logo"> <h1>Jil Cantine</h1></span>
+            <!--<img id="logo" src="" alt="Logo"/>-->
+        </a>
+    </header>
+    <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+    <!--/down-->
+    <div class="down">
+        <a href="index.twig"><img src="images/icon.png"></a>
+        <a href="index.twig"><span class=" name-caret">{{ user.pseudo }}</span></a>
+        <ul>
+            <li><a class="tooltips" href="/logout"><span>Deconnexion</span><i class="lnr lnr-power-switch"></i></a></li>
+        </ul>
+    </div>
+    <!--//down-->
+    <div class="menu">
+        <ul id="menu" >
+            <li><a href="/"><i class="fas fa-tachometer-alt"></i><span>Tableau de Bord</span></a></li>
+            <li id="menu-academico" ><a href="#"><i class="fa fa-cog"></i> <span> Creation</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                <ul id="menu-academico-sub" >
+                    <li id="menu-academico-avaliacoes" ><a href="/cantine"> Cantine</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!-- Side Modal Top Right -->
+
+<!-- To change the direction of the modal animation change .right class -->
+<div class="modal fade right" id="sideModalTR" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+
+    <!-- Add class .modal-side and then add class .modal-top-right (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-side modal-top-right" role="document">
+
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100" id="myModalLabel"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="box-container">
+                    <div class="box-title">
+                        <h4></h4>
+                    </div>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Retour</button>
+                <button type="button" class="btn btn-dark" id="final">Valider</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Side Modal Top Right -->
+</div>
+<script>
+    var toggle = true;
+
+    $(".sidebar-icon").click(function() {
+        if (toggle)
+        {
+            $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+            $("#menu span").css({"position":"absolute"});
+        }
+        else
+        {
+            $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+            setTimeout(function() {
+                $("#menu span").css({"position":"relative"});
+            }, 400);
+        }
+
+        toggle = !toggle;
+    });
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/all.min.js"></script>
+<!--js -->
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mdb.min.js"></script>*
+<script src="js/toast.js"></script>
+<script src="js/sys.js"></script>

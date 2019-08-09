@@ -1,0 +1,529 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Jil Cantine | Creation Cantine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="css/mdb.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/BsMultiSelect.min.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/toast.css" rel="stylesheet">
+<!-- jQuery -->
+<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+<script type="text/javascript" src="js/BsMultiSelect.min.js"></script>
+<!--clock init-->
+</head>
+<body>
+   <div class="page-container">
+   <!--/content-inner-->
+	<div class="left-content">
+	   <div class="inner-content">
+		<!-- header-starts -->
+
+									<div class="outter-wp">
+									<!--/sub-heard-part-->
+											 <div class="sub-heard-part">
+													   <ol class="breadcrumb m-b-0">
+															<li><a href="#">Gestion</a></li>
+															<li class="active"> Cantine</li>
+														</ol>
+											</div>
+											<!--/sub-heard-part-->
+										<!--/tabs-->
+										 <div class="tab-main">
+											 <!--/tabs-inner-->
+												<div class="tab-inner">
+												      <div id="tabs" class="tabs">
+													            <h2 class="inner-tittle">Gestion Primaire</h2>
+															<div class="graph">
+																					<nav>
+																						<ul>
+																							<li><a href="#section-1" class="icon-shop"><i class="lnr lnr-briefcase"></i> <span>FIXE</span></a></li>
+																							<li><a href="#section-2" class="icon-cup"><i class="far fa-calendar"></i> <span>SEMAINE</span></a></li>
+																							<li><a href="#section-3" class="icon-food"><i class="fa fa-utensils"></i> <span>Accomp 1</span></a></li>
+																							<li><a href="#section-4" class="icon-lab"><i class="fa fa-flask"></i> <span>Accomp 2</span></a></li>
+																							<li><a href="#section-5" class="icon-truck"><i class="fa fa-beer"></i> <span>Boisson</span></a></li>
+																						</ul>
+																					</nav>
+																					<div class="content tab">
+																						<section id="section-1">
+																							<div class="row">
+																								<div class="col-sm-8">
+																									<div class="row">
+																										{% for item in info.PlatFixe %}
+                                                                                                        <div class="col-sm-4 alls">
+                                                                                                            <span class="tra"><i class="fa fa-trash"></i></span>
+                                                                                                            <div class="single_deal">
+                                                                                                                <div class="content fixe" data-toggle="modal" data-target="#fixe{{ item._id }}" style="background: url('images/Fixe/{{ item.url }}') center">
+                                                                                                                </div>
+                                                                                                                <div class="title">
+                                                                                                                    <h1 class="name">{{ item.tit }}</h1>
+                                                                                                                    <h1 class="price">{{ item.price }}</h1>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <!-- Central Modal Small -->
+                                                                                                        <div class="modal fade" id="fixe{{ item._id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                                                                                          aria-hidden="true">
+
+                                                                                                          <!-- Change class .modal-sm to change the size of the modal -->
+                                                                                                          <div class="modal-dialog modal-lg" role="document">
+
+
+                                                                                                            <div class="modal-content">
+                                                                                                              <div class="modal-header">
+                                                                                                                <h4 class="modal-title w-100" id="myModalLabel">{{ item.tit }}</h4>
+                                                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                                                  <span aria-hidden="true">&times;</span>
+                                                                                                                </button>
+                                                                                                              </div>
+                                                                                                              <div class="modal-body">
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <h2>List des Suplements</h2>
+                                                                                                                          {% for items in item.accompagement %}
+                                                                                                                              <p class="metric">{{items.accomp.name}}</p>
+                                                                                                                          {% endfor %}
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <h2>Ajouter Un Suplement</h2>
+                                                                                                                          <select id="SuplementFixe" class="form-control"  multiple="multiple" style="display: none;">
+                                                                                                                              {% for item in info.Accompa  %}
+                                                                                                                                  <option value="{{item.name}}">{{item.name}}</option>
+                                                                                                                              {% endfor %}
+                                                                                                                          </select>
+
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                              <div class="modal-footer" data-ryu="{{ item.tit }}">
+                                                                                                                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Annuler</button>
+                                                                                                                <button type="button" class="btn btn-primary btn-sm SuplementFixeBut">Enregister</button>
+                                                                                                              </div>
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                        </div>
+                                                                                                        <!-- Central Modal Small -->
+                                                                                                        {% endfor %}
+																								</div>
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <!-- Default form register -->
+                                                                                                    <form action="/fixe" method="post" enctype="multipart/form-data" class="text-center border border-light p-5">
+
+                                                                                                        <p class="h4 mb-4">Creation Menu Fixe</p>
+
+                                                                                                        <div class="form-row mb-4">
+                                                                                                            <div class="col">
+                                                                                                                <!-- First name -->
+                                                                                                                <input type="text" name="name" class="form-control" placeholder="Nom Du plat">
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <input type="file" style="display: inline-block" id="fixeInput" name="fixeInput">
+                                                                                                        <!-- E-mail -->
+                                                                                                        <input type="number" name="price" class="form-control mb-4" placeholder="prix">
+
+                                                                                                        <button class="btn btn-dark my-4 btn-block" type="submit">Enregistrer</button>
+
+                                                                                                    </form>
+                                                                                                    <!-- Default form register -->
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </section>
+																						<section id="section-2">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-8">
+                                                                                                    <div class="row">
+                                                                                                        {% for item in info.PlatSemaine %}
+                                                                                                        <div class="col-sm-4 alls" data-ryu="{{ item.tit }}">
+                                                                                                            <span class="tra"><i class="fa fa-trash"></i></span>
+                                                                                                            <div class="single_deal">
+                                                                                                                <div class="content semaine" data-toggle="modal" data-target="#semaine{{ item._id }}" style="background: url('images/Fixe/{{ item.url }}') center">
+                                                                                                                </div>
+                                                                                                                <div class="title">
+                                                                                                                    <h1 class="name">{{ item.tit }}</h1>
+                                                                                                                    <h1 class="price">{{ item.price }}</h1>
+                                                                                                                    <!-- Default unchecked -->
+                                                                                                                    <div class="custom-control custom-checkbox">
+                                                                                                                        <input type="checkbox" class="custom-control-input semaineA" name="defaultUnchecked" id="defaultUnchecked{{ item._id }}" data-ryu="{{ item._id }}" {{ (item.affiche == 2) ? "checked": "" }}>
+                                                                                                                        <label class="custom-control-label" for="defaultUnchecked{{ item._id }}">Actif</label>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <!-- Central Modal Small -->
+                                                                                                                                                                                                                <div class="modal fade" id="semaine{{ item._id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                                                                                                                                                                                                  aria-hidden="true">
+
+                                                                                                                                                                                                                  <!-- Change class .modal-sm to change the size of the modal -->
+                                                                                                                                                                                                                  <div class="modal-dialog modal-lg" role="document">
+                                                                                                                                                                                                                    <div class="modal-content">
+                                                                                                                                                                                                                      <div class="modal-header">
+                                                                                                                                                                                                                        <h4 class="modal-title w-100" id="myModalLabel">{{ item.tit }}</h4>
+                                                                                                                                                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                                                                                                                                                          <span aria-hidden="true">&times;</span>
+                                                                                                                                                                                                                        </button>
+                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                      <div class="modal-body">
+                                                                                                                                                                                                                          <div class="row">
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>List des Suplements</h2>
+                                                                                                                                                                                                                                  {% for items in item.accompagement %}
+                                                                                                                                                                                                                                      {% if  items.accomp.etat == 1%}
+                                                                                                                                                                                                                                          <p class="metric">{{items.accomp.name}}</p>
+                                                                                                                                                                                                                                      {% endif %}
+                                                                                                                                                                                                                                  {% endfor %}
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>Ajouter Un Suplement</h2>
+                                                                                                                                                                                                                                  <select id="Suplement" class="form-control"  multiple="multiple" style="display: none;">
+                                                                                                                                                                                                                                      {% for item in info.Accompa  %}
+                                                                                                                                                                                                                                          <option value="{{item.name}}">{{item.name}}</option>
+                                                                                                                                                                                                                                      {% endfor %}
+                                                                                                                                                                                                                                  </select>
+
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                          <div class="row">
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>List des Accompagnements</h2>
+                                                                                                                                                                                                                                  {% for items in item.accompagement %}
+                                                                                                                                                                                                                                      {% if  items.accomp.etat == 2%}
+                                                                                                                                                                                                                                      <p class="metric">{{items.accomp.name}}</p>
+                                                                                                                                                                                                                                      {% endif %}
+                                                                                                                                                                                                                                  {% endfor %}
+
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>Ajouter Un Accompagnement</h2>
+                                                                                                                                                                                                                                  <select id="Accompagnements" class="form-control"  multiple="multiple" style="display: none;">
+                                                                                                                                                                                                                                      {% for item in info.Accompagnement  %}
+                                                                                                                                                                                                                                          <option value="{{item.name}}">{{item.name}}</option>
+                                                                                                                                                                                                                                      {% endfor %}
+                                                                                                                                                                                                                                  </select>
+
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                          </div>
+
+                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                      <div class="modal-footer" data-ryu="{{ item.tit }}">
+                                                                                                                                                                                                                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Annuler</button>
+                                                                                                                                                                                                                        <button type="button" class="btn btn-primary btn-sm SuplementBut">Enregistrer</button>
+                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                <!-- Central Modal Small -->
+                                                                                                        {% endfor %}
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <!-- Default form register -->
+                                                                                                    <form action="/semaine" method="post" enctype="multipart/form-data" class="text-center border border-light p-5">
+
+                                                                                                        <p class="h4 mb-4">Creation Menu Semaine</p>
+
+                                                                                                        <div class="form-row mb-4">
+                                                                                                            <div class="col">
+                                                                                                                <!-- First name -->
+                                                                                                                <input type="text" name="name" class="form-control" placeholder="Nom Du plat">
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <input type="file" style="display: inline-block" id="fixeInput" name="fixeInput">
+                                                                                                        <!-- E-mail -->
+                                                                                                        <input type="number" name="price" class="form-control mb-4" placeholder="prix">
+
+                                                                                                        <button class="btn btn-dark my-4 btn-block" type="submit">Enregistrer</button>
+
+                                                                                                    </form>
+                                                                                                    <!-- Default form register -->
+                                                                                                </div>
+                                                                                            </div>
+																						</section>
+																						<section id="section-3">
+																							<div class="row">
+																								<div class="col-sm-8">
+																									<div class="row">
+                                                                                                        {% for item in info.Accompa  %}
+                                                                                                            <div class="col-sm-3">
+                                                                                                                <div class="listView" data-ryu="{{ item.name }}">
+                                                                                                                    <span><i class="fa fa-utensils"></i></span>
+                                                                                                                    <span>{{item.name}}</span>
+                                                                                                                    <span class="ttra"><i class="fa fa-trash"></i></span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        {% endfor %}
+																									</div>
+																								</div>
+																								<div class="col-sm-4">
+																									<form action="/accomp" method="post" class="text-center border border-light p-5">
+
+																										<p class="h4 mb-4">Ajouter Accompagnement</p>
+
+																										<div class="form-row mb-4">
+																											<div class="col">
+																												<!-- First name -->
+																												<input type="text" name="accomp" class="form-control" placeholder="Nom Accompagnement">
+																											</div>
+																										</div>
+																										<button class="btn btn-dark my-4 btn-block" type="submit">Enregistrer</button>
+																									</form>
+																								</div>
+																							</div>
+																						</section>
+																						<section id="section-4">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-8">
+                                                                                                    <div class="row">
+                                                                                                        {% for item in info.Accompagnement  %}
+                                                                                                            <div class="col-sm-3">
+                                                                                                                <div class="listView" data-ryu="{{ item.name }}">
+                                                                                                                    <span><i class="fa fa-pizza-slice"></i></span>
+                                                                                                                    <span>{{item.name}}</span>
+                                                                                                                    <span class="ttra"><i class="fa fa-trash"></i></span>
+                                                                                                                </div>
+
+                                                                                                            </div>
+                                                                                                        {% endfor %}
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <form action="/accompnement" method="post" class="text-center border border-light p-5">
+
+                                                                                                        <p class="h4 mb-4">Ajouter Contenant de Sauce</p>
+
+                                                                                                        <div class="form-row mb-4">
+                                                                                                            <div class="col">
+                                                                                                                <!-- First name -->
+                                                                                                                <input type="text" name="accomp" class="form-control" placeholder="First name">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <button class="btn btn-dark my-4 btn-block" type="submit">Enregistrer</button>
+                                                                                                    </form>
+                                                                                                </div>
+                                                                                            </div>
+																						</section>
+																						<section id="section-5">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-8">
+                                                                                                    <div class="row">
+                                                                                                        {% for item in info.Boisson  %}
+                                                                                                            <div class="col-sm-3">
+                                                                                                                <div class="listView" data-ryu="{{ item.name }}>
+                                                                                                                    <span><i class="fa fa-beer"></i></span>
+                                                                                                                    <span>{{item.name}}</span>
+                                                                                                                <span class="ttra"><i class="fa fa-trash"></i></span>
+                                                                                                                </div>
+
+                                                                                                            </div>
+                                                                                                        {% endfor %}
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <form action="/boisson" method="post" class="text-center border border-light p-5">
+
+                                                                                                        <p class="h4 mb-4">Ajouter Boisson</p>
+
+                                                                                                        <div class="form-row mb-4">
+                                                                                                            <div class="col">
+                                                                                                                <!-- First name -->
+                                                                                                                <input type="text" name="accomp" class="form-control" placeholder="First name">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <button class="btn btn-dark my-4 btn-block" type="submit">Enregistrer</button>
+                                                                                                    </form>
+                                                                                                </div>
+                                                                                            </div>
+																						</section>
+																					</div><!-- /content -->
+																				</div>
+																				<!-- /tabs -->
+
+																			</div>
+																			<script src="js/cbpFWTabs.js"></script>
+																			<script>
+																				new CBPFWTabs( document.getElementById( 'tabs' ) );
+																			</script>
+																			<h3 class="inner-tittle two">Gestion Secondaire</h3>
+																			<div class="graph">
+
+																						        <div class="tabs">
+																							  <nav class="second"> <a>Ecole</a> <a>Administrateur</a></nav>
+																							  <div class="context">
+                                                                                                  <div class="container">
+                                                                                                      <div class="row">
+                                                                                                          <div class="col-sm-6">
+                                                                                                              <form action="/boisson" method="post" class="text-center border border-light p-5">
+
+                                                                                                                  <p class="h4 mb-4">Ajouter Ecole</p>
+
+                                                                                                                  <div class="form-row mb-4">
+                                                                                                                      <div class="col">
+                                                                                                                          <!-- First name -->
+                                                                                                                          <input type="text" id="ecoleName" class="form-control" placeholder="Nom Ecole">
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                                  <button class="btn btn-dark my-4 btn-block" id="ecole" type="button">Enregistrer</button>
+                                                                                                              </form>
+                                                                                                          </div>
+                                                                                                          <div class="col-sm-6">
+                                                                                                              <ul id="ecoleList">
+                                                                                                                  {% for item in info.school %}
+                                                                                                                  <li> {{ item.label }} </li>
+                                                                                                                  {% endfor %}
+                                                                                                              </ul>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                  </div>
+																								</div>
+																							  <div class="context">
+                                                                                                  <div class="container">
+                                                                                                      <div class="row">
+                                                                                                          <div class="col-sm-6">
+                                                                                                              <form class="text-center border border-light p-5">
+
+                                                                                                                  <p class="h4 mb-4">Paramettre Administrateur</p>
+
+                                                                                                                  <div class="form-row mb-4">
+                                                                                                                     <input type="password" id="ancienPassword" class="form-control" placeholder="Ancien Mot de Passe">
+                                                                                                                     <input type="hidden" id="ident" class="form-control" value="{{ user._id }}">
+                                                                                                                     <input type="password" id="newPassword" class="form-control" placeholder="Nouveau Mot de Passe">
+                                                                                                                     <input type="password" id="confirmPassword" class="form-control" placeholder="Confirmer Mot de Passe">
+                                                                                                                  </div>
+                                                                                                                  <button class="btn btn-dark my-4 btn-block" id="motDepase" type="button">Changer</button>
+                                                                                                              </form>
+                                                                                                          </div>
+                                                                                                          <div class="col-sm-6">
+                                                                                                              <ul id="ecoleList">
+                                                                                                                  {% for item in info.ecole %}
+                                                                                                                      <li> {{ item.label }} </li>
+                                                                                                                  {% endfor %}
+                                                                                                              </ul>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                  </div>
+																								</div>
+																							  <div class="context">
+																								<p>Content #3</p>
+																								<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse tempor accumsan purus a rutrum. Nam congue tempor dui, vel auctor dolor tincidunt id. Proin fringilla consectetur urna. Fusce nec sodales turpis, eu rhoncus enim. Pellentesque pretium, dui et feugiat venenatis, sapien augue molestie quam, ac vulputate arcu quam et mauris. Duis lectus mi, congue ac tortor vel, maximus venenatis sem. Nam eget cursus sapien, sit amet rhoncus lacus. Vestibulum est justo, scelerisque ac erat eu, fermentum suscipit tellus. Aliquam velit nisi, feugiat ut arcu et, finibus efficitur lectus.</p>
+																								<p>Nulla aliquam dapibus nunc, sed convallis sem semper sit amet. Mauris et ullamcorper lorem. Donec volutpat egestas massa, vitae porttitor mi venenatis sit amet. Nulla condimentum fermentum risus non mattis. Mauris ut posuere erat. Duis vel ante sit amet augue blandit facilisis. Nulla congue turpis at imperdiet porta. Nullam quis aliquet augue. Duis et arcu in augue fringilla sodales. Aliquam pulvinar elit non iaculis egestas. Nam risus enim, malesuada id augue a, sagittis pharetra quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, ligula eget ultrices venenatis, metus neque finibus tortor, sit amet venenatis turpis nibh et odio.</p>
+																							  </div>
+																							</div>
+																							<script>
+																							$(function() {
+																							  $('.tabs nav a').on('click', function() {
+																								show_content($(this).index());
+																							  });
+
+																							  show_content(0);
+
+																							  function show_content(index) {
+																								// Make the content visible
+																								$('.tabs .context.visible').removeClass('visible');
+																								$('.tabs .context:nth-of-type(' + (index + 1) + ')').addClass('visible');
+
+																								// Set the tab to selected
+																								$('.tabs nav.second a.selected').removeClass('selected');
+																								$('.tabs navnav.second a:nth-of-type(' + (index + 1) + ')').addClass('selected');
+																							  }
+																							});
+																							</script>
+
+																			</div>
+																 <div class="clearfix"> </div>
+														</div>
+												</div>
+											  <!--//tabs-inner-->
+										 </div>
+										<!--//tabs-->
+									</div>
+
+        <footer>
+            <p>&copy 2019 Jil Cantine . Tout Droit reservé </p>
+        </footer>
+								</div>
+
+				{% include 'partials/sidemenu.twig' %}
+							  <div class="clearfix"></div>
+							</div>
+   <script src="/socket.io/socket.io.js"></script>
+							<script>
+                                var socket = io();
+							var toggle = true;
+							$('.ttra').click(function () {
+                                var ele = $(this).parent().attr("data-ryu")
+                                socket.emit("delAccomp", ele);
+                                $(this).parent().fadeOut(1000);
+                            })
+                                $('.tra').click(function () {
+                                    var ele = $(this).parent().attr("data-ryu")
+                                    socket.emit("delPlat", ele);
+                                    $(this).parent().fadeOut(1000);
+                                })
+                                $('.SuplementBut').click(function () {
+                                    socket.emit("semaineAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$('#Accompagnements').val(),Suplement:$('#Suplement').val() })
+                                    window.location.href = "/cantine";
+                                    //console.log("supplementSemaine", $('#Accompagnements').val(), $('#Suplement').val())
+
+                                })
+                            $("select").bsMultiSelect({
+                                selectedPanelDefMinHeight: 'calc(2.25rem + 2px)',
+                                selectedPanelLgMinHeight: 'calc(2.875rem + 2px)',
+                                selectedPanelSmMinHeight: 'calc(1.8125rem + 2px)',
+                                selectedPanelDisabledBackgroundColor: '#e9ecef',
+                                selectedPanelFocusBorderColor: '#80bdff',
+                                selectedPanelFocusBoxShadow: '0 0 0 0.2rem rgba(0, 123, 255, 0.25)',
+                                selectedPanelFocusValidBoxShadow: '0 0 0 0.2rem rgba(40, 167, 69, 0.25)',
+                                selectedPanelFocusInvalidBoxShadow: '0 0 0 0.2rem rgba(220, 53, 69, 0.25)',
+                                filterInputColor: '#495057',
+                                selectedItemContentDisabledOpacity: '.65',
+                                dropdDownLabelDisabledColor: '#6c757d',
+                                containerClass: 'dashboardcode-bsmultiselect',
+                                dropDownClass: 'dropdown-menu',
+                            dropDownItemClass: 'px-2',
+                                dropDownItemHoverClass: 'text-primary bg-light',
+                                selectedPanelClass: 'form-control',
+                                selectedItemClass: 'badge',
+                                removeSelectedItemButtonClass: 'close',
+                                filterInputItemClass: '',
+                                filterInputClass: ''
+                            });
+							$(".sidebar-icon").click(function() {
+							  if (toggle)
+							  {
+								$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+								$("#menu span").css({"position":"absolute"});
+							  }
+							  else
+							  {
+								$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+								setTimeout(function() {
+								  $("#menu span").css({"position":"relative"});
+								}, 400);
+							  }
+
+											toggle = !toggle;
+										});
+							</script>
+<!--js -->
+</body>
+</html>

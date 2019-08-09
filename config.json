@@ -1,0 +1,18 @@
+{
+  "port": "2037",
+  "account":{
+    "SSID": "AC2230703c07cca27f0a297f007a613d2f",
+    "TOKEN" : "f4134e50019a98847403da72a7ef6572"
+  },
+  "session":{
+    "secret" : "kjjvejevoeve5v3e45pzpzvqmlsq53315789kjjvejevoeve5v3e45pzpzvqmlsq53315789",
+    "resave": false,
+    "saveUninitialized": false
+  },
+  "db": {
+    "host": "mongodb://localhost:27017/JillCantine",
+    "useNewUrlParser": true,
+    "useFindAndModify": false
+
+  }
+}
