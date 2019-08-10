@@ -256,16 +256,20 @@ apiMobile.post('/commande/:id', async (req, res) =>{
         const error = req.validationErrors();
         if(error){
             req.session.Error = error;
+            console.log("plein de Err",error)
             res.send({statue:false, error:error});
         }
         else{
+
             let id = req.params.id;
             let price = req.body.price;
             let platId = req.body.platId;
             let contain = req.body.contain;
+            const rend = req.body.rend;
+
+            console.log("chaqueMembre",id, price, platId, contain, rend)
             contain = contain.substring(1,contain.length-1);
             contain = contain.split(",");
-            const rend = req.body.rend;
 
             let personC = await Administration.setCommande(id,price,platId,contain,rend);
             if (!isErr(personC)){
@@ -360,9 +364,10 @@ apiMobile.get('/all/:id', async (req, res)=>{
         let info = {};
         let fixe = await Administration.getAllPlatByTypeWithAffiche(1,2);
         let semaine = await Administration.getAllPlatByTypeWithAffiche(2,2);
+        const Boisson = await Administration.getAllAccompagnementByType(3);
         info.fixe = fixe;
         info.semaine = semaine;
-        console.log(info)
+        info.Boisson = Boisson;
         res.send({statue:true, info:info})
     }
     else{
