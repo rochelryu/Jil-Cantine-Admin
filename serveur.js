@@ -267,11 +267,6 @@ apiMobile.post('/commande/:id', async (req, res) =>{
             let platId = req.body.platId;
             let contain = req.body.contain;
             const rend = req.body.rend;
-
-            console.log("chaqueMembre",id, price, platId, contain, rend)
-            contain = contain.substring(1,contain.length-1);
-            contain = contain.split(",");
-
             let personC = await Administration.setCommande(id,price,platId,contain,rend);
             if (!isErr(personC)){
                 res.send({statue:true, info:personC});
