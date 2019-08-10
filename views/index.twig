@@ -142,7 +142,7 @@
 																			<td scope="row">{{ loop.index }}</td>
 																			<td>{{ item.code }}</td>
 																			<td>{{item.price}} F cfa</td>
-																			<td>{{item.ecole}}</td>
+																			<td>{{item.ecole.schoolValue}}</td>
 																			<td><a class="btn btn-action fake" data-toggle="modal" data-target="#sideModalTR"><i class="far fa-eye"></i></a></td>
 																		</tr>
 																	{% endfor %}
@@ -172,7 +172,7 @@
 												<td scope="row">{{ loop.index }}</td>
 												<td>{{ item.code }}</td>
 												<td>{{item.price}} F cfa</td>
-												<td>{{item.ecole}}</td>
+												<td>{{item.ecole.schoolValue}}</td>
 												<td><a class="btn btn-action fake" data-toggle="modal" data-target="#sideModalTR"><i class="far fa-eye"></i></a></td>
 											</tr>
 										{% endfor %}

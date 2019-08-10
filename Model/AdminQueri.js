@@ -87,14 +87,7 @@ exports.Administration = class {
         return new Promise(async(next)=>{
             await Client.findOne({'_id':ObjectID(cliendId)})
                 .then(res=>{
-                    School.findOne({'value':res.schoolValue})
-                        .then(ress=>{
-                            const equi = ress.label;
-                            next(equi);
-
-                        }).catch(errs=>{
-                            next(errs);
-                        })
+                    next(res);
                 }).catch(err=>{
                     next(err);
                 })
