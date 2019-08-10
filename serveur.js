@@ -248,7 +248,8 @@ apiMobile.post('/signin', async (req, res) =>{
     }
 })
 apiMobile.post('/commande/:id', async (req, res) =>{
-    if(req.session.Pharma){
+    const user = await Administration.getClientWithId(req.params.id);
+    if(user){
         req.check('platId', "plat Invalide").notEmpty();
         req.check('price', "prix Invalide").notEmpty();
         req.check('contain', "accompagnement Invalide").notEmpty();
