@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3921b0b3-60a3-4bec-9f01-a19ea6cde0e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/AdminQueri.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminQueri.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminSchM.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminSchM.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serveur.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.twig" afterDir="false" />
     </list>
@@ -22,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serveur.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="351" column="24" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="24" />
+            <state relative-caret-position="66">
+              <caret line="241" column="31" lean-forward="true" selection-start-line="241" selection-start-column="31" selection-end-line="241" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -49,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="213" column="50" lean-forward="true" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
+            <state relative-caret-position="129">
+              <caret line="97" column="96" selection-start-line="97" selection-start-column="85" selection-end-line="97" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -58,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="129">
+              <caret line="248" column="64" selection-start-line="248" selection-start-column="64" selection-end-line="248" selection-end-column="64" />
               <folding>
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -81,9 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>accomp</find>
-      <find>.listView span:last-child</find>
-      <find>api.get('/c</find>
       <find>accomp.</find>
       <find>Accompagnements</find>
       <find>select</find>
@@ -110,7 +105,10 @@
       <find>CommandeInWait</find>
       <find>adre</find>
       <find>list</find>
+      <find>f cfa</find>
+      <find>/signin</find>
       <find>/me</find>
+      <find>setClient</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,18 +122,18 @@
         <option value="$PROJECT_DIR$/views/login.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/views/tabs.twig" />
-        <option value="$PROJECT_DIR$/Model/AdminQueri.js" />
         <option value="$PROJECT_DIR$/Model/AdminSchM.js" />
         <option value="$PROJECT_DIR$/views/index.twig" />
         <option value="$PROJECT_DIR$/serveur.js" />
+        <option value="$PROJECT_DIR$/Model/AdminQueri.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="233" />
-    <option name="y" value="27" />
-    <option name="width" value="1093" />
-    <option name="height" value="741" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="254" />
+    <option name="y" value="50" />
+    <option name="width" value="1061" />
+    <option name="height" value="747" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -237,23 +235,23 @@
       <workItem from="1565368361542" duration="245000" />
       <workItem from="1565368627856" duration="21794000" />
       <workItem from="1565669724153" duration="649000" />
-      <workItem from="1566206978529" duration="7299000" />
+      <workItem from="1566206978529" duration="10804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32074000" />
+    <option name="totallyTimeSpent" value="35579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63247865" visible="true" weight="0.19136262" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6312849" visible="true" weight="0.19136262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.36752138" side_tool="true" visible="true" weight="0.19136262" />
+      <window_info id="npm" order="2" sideWeight="0.36871508" side_tool="true" visible="true" weight="0.19136262" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20812182" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.50592214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -261,7 +259,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32849365" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.19963703" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.39424703" />
       <window_info anchor="bottom" id="GraphQL" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -335,8 +333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="129">
+          <caret line="248" column="64" selection-start-line="248" selection-start-column="64" selection-end-line="248" selection-end-column="64" />
           <folding>
             <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#table#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -346,15 +344,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="213" column="50" lean-forward="true" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
+        <state relative-caret-position="129">
+          <caret line="97" column="96" selection-start-line="97" selection-start-column="85" selection-end-line="97" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="351" column="24" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="24" />
+        <state relative-caret-position="66">
+          <caret line="241" column="31" lean-forward="true" selection-start-line="241" selection-start-column="31" selection-end-line="241" selection-end-column="31" />
         </state>
       </provider>
     </entry>

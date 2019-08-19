@@ -224,6 +224,7 @@ apiMobile.post('/signin', async (req, res) =>{
     req.check('firstname', "prenom Invalide").notEmpty();
     req.check('numero', "numero Invalide").notEmpty();
     req.check('schoolValue', "etablissement Invalide").notEmpty();
+    req.check('commune', "commune Invalide").notEmpty();
     req.check('pass', "On ne Valide Pas ce Genre de Mot de passe").isAlphanumeric(); //.matches(/^(?=.*[^a-zA-Z0-9])$/);
 
     const error = req.validationErrors();
@@ -235,10 +236,11 @@ apiMobile.post('/signin', async (req, res) =>{
         let name = req.body.name;
         let firstname = req.body.firstname;
         let numero = req.body.numero;
+        let commune = req.body.commune;
         let schoolValue = req.body.schoolValue;
         let pass = req.body.pass;
         let password = crypto.createHmac('sha256', pass).update('I love cupcakes').digest('hex');
-        let personC = await Administration.setClient(name,firstname,password,numero,schoolValue);
+        let personC = await Administration.setClient(name,firstname,password,numero,schoolValue, commune);
         if (!isErr(personC)){
             req.session.Pharma = personC;
             /*const  expiresIn  =  24  *  60  *  60;

@@ -93,9 +93,9 @@ exports.Administration = class {
                 })
         })
     }
-    static setClient(name, firstname, password, numero, schoolValue){
+    static setClient(name, firstname, password, numero, schoolValue,commune){
         return new Promise(async (next)=>{
-            const user = new Client({name:name, firstname: firstname, numero:numero, schoolValue: schoolValue, password:password});
+            const user = new Client({name:name, firstname: firstname, numero:numero, schoolValue: schoolValue, address:commune, password:password});
             await user.save().then((res)=>{
                 console.log(res);
                 next(res);
