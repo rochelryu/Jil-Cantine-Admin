@@ -70,7 +70,12 @@ api.get('/', async (req, res)=>{
         const CommandeInWait = await Administration.getCommandInWait();
         const CommandeSend = await Administration.getCommandInSend();
         for(let i in CommandeInWait){
-            CommandeInWait[i].ecole = await Administration.getEcoleOfCommande(CommandeInWait[i].CliendId)
+            CommandeInWait[i].plat = await Administration.getPlatWithId(CommandeInWait[i].platId);
+            for(let j in CommandeInWait[i].contain){
+                const Focus = await Administration.getAccompagnementWithId(CommandeInWait[i].contain[j]);
+                CommandeInWait[i].vraiEle.push(Focus)
+            }
+            CommandeInWait[i].client = await Administration.getEcoleOfCommande(CommandeInWait[i].CliendId)
         }
         for(let j in CommandeSend){
             CommandeSend[j].ecole = await Administration.getEcoleOfCommande(CommandeSend[j].CliendId)
@@ -339,15 +344,15 @@ apiMobile.get('/School',async (req,res)=>{
     const school = await Administration.getSchools();
     res.send({statue:true, school:school});
 });
-apiMobile.get('/me',async (req,res)=>{
-    const user = await Administration.getClientWithId(req.query.key);
+apiMobile.get('/me/:id',async (req,res)=>{
+    const user = await Administration.getClientWithId(req.params.id);
     if(user){
-        console.log("ici")
-        const commande = await Administration.getCommandWithId(req.query.key);
-        res.send({statue:false, info:{commande:commande}})
+        console.log("ici");
+        const commande = await Administration.getCommandWithId(req.params.id);
+        res.send({statue:true, info:{commande:commande}})
     }
     else {
-        console.log("là")
+        console.log("là");
 
         res.send({statue:false, info:{commande:[]}})
     }

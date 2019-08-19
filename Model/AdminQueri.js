@@ -138,7 +138,7 @@ exports.Administration = class {
 
     static getNumberClient(){
         return new Promise(async (next)=>{
-            await Client.count().then(res =>{
+            await Client.find().then(res =>{
                 next(res);
             }).catch(err =>{
                 next(err);
