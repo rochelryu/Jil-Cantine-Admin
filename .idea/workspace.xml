@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3921b0b3-60a3-4bec-9f01-a19ea6cde0e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Model/AdminQueri.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminQueri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serveur.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serveur.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+            <state relative-caret-position="84">
+              <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -27,8 +29,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/tabs.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="277" column="121" selection-start-line="277" selection-start-column="114" selection-end-line="277" selection-end-column="121" />
+            <state relative-caret-position="70">
+              <caret line="298" column="132" selection-start-line="298" selection-start-column="124" selection-end-line="298" selection-end-column="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="2915" column="23" selection-start-line="2915" selection-start-column="23" selection-end-line="2915" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -54,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="237" column="42" lean-forward="true" selection-start-line="237" selection-start-column="42" selection-end-line="237" selection-end-column="42" />
+            <state relative-caret-position="217">
+              <caret line="239" selection-start-line="239" selection-end-line="239" />
             </state>
           </provider>
         </entry>
@@ -82,8 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SuplementBut</find>
-      <find>SuplementFixeBut</find>
       <find>semaineAjouComp</find>
       <find>suplement</find>
       <find>List</find>
@@ -110,8 +119,10 @@
       <find>/me</find>
       <find>setClient</find>
       <find>/accomp</find>
-      <find>setAcc</find>
       <find>getAccompagnementWithId</find>
+      <find>setAcc</find>
+      <find>fa</find>
+      <find>listView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,7 +132,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/views/css/style.css" />
         <option value="$PROJECT_DIR$/views/login.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/views/tabs.twig" />
@@ -129,6 +139,7 @@
         <option value="$PROJECT_DIR$/views/index.twig" />
         <option value="$PROJECT_DIR$/serveur.js" />
         <option value="$PROJECT_DIR$/Model/AdminQueri.js" />
+        <option value="$PROJECT_DIR$/views/css/style.css" />
       </list>
     </option>
   </component>
@@ -160,6 +171,17 @@
               <item name="jil_Cantine-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="jil_Cantine-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jil_Cantine-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jil_Cantine-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jil_Cantine-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jil_Cantine-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,18 +262,18 @@
       <workItem from="1565669724153" duration="649000" />
       <workItem from="1566206978529" duration="10943000" />
       <workItem from="1566282097110" duration="144000" />
-      <workItem from="1566302785408" duration="3156000" />
+      <workItem from="1566302785408" duration="3398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39018000" />
+    <option name="totallyTimeSpent" value="39260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="221" y="27" width="1061" height="663" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7907609" visible="true" weight="0.24759153" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7907609" visible="true" weight="0.24759153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.20923913" side_tool="true" visible="true" weight="0.24759153" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -265,7 +287,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32849365" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28265107" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28265107" />
       <window_info anchor="bottom" id="GraphQL" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -280,13 +302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="2932" column="19" selection-start-line="2932" selection-start-column="19" selection-end-line="2932" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -311,13 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/tabs.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="277" column="121" selection-start-line="277" selection-start-column="114" selection-end-line="277" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -334,15 +342,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="237" column="42" lean-forward="true" selection-start-line="237" selection-start-column="42" selection-end-line="237" selection-end-column="42" />
+        <state relative-caret-position="217">
+          <caret line="239" selection-start-line="239" selection-end-line="239" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+        <state relative-caret-position="84">
+          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tabs.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="298" column="132" selection-start-line="298" selection-start-column="124" selection-end-line="298" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="2915" column="23" selection-start-line="2915" selection-start-column="23" selection-end-line="2915" selection-end-column="23" />
         </state>
       </provider>
     </entry>

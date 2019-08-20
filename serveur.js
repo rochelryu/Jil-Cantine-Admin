@@ -70,10 +70,10 @@ api.get('/', async (req, res)=>{
         const CommandeInWait = await Administration.getCommandInWait();
         const CommandeSend = await Administration.getCommandInSend();
         for(let i in CommandeInWait){
+            CommandeInWait[i].vraiEle = new Array();
             CommandeInWait[i].plat = await Administration.getPlatWithId(CommandeInWait[i].platId);
             for(let j in CommandeInWait[i].contain){
                 const Focus = await Administration.getAccompagnementWithId(CommandeInWait[i].contain[j]);
-                console.log("celui de focus", Focus);
                 CommandeInWait[i].vraiEle.push(Focus)
             }
             CommandeInWait[i].client = await Administration.getEcoleOfCommande(CommandeInWait[i].CliendId)
