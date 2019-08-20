@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3921b0b3-60a3-4bec-9f01-a19ea6cde0e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Model/AdminQueri.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminQueri.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serveur.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serveur.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="168">
+              <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -55,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="226" column="30" lean-forward="true" selection-start-line="226" selection-start-column="30" selection-end-line="226" selection-end-column="30" />
+            <state relative-caret-position="105">
+              <caret line="237" column="42" lean-forward="true" selection-start-line="237" selection-start-column="42" selection-end-line="237" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -128,8 +127,8 @@
         <option value="$PROJECT_DIR$/views/tabs.twig" />
         <option value="$PROJECT_DIR$/Model/AdminSchM.js" />
         <option value="$PROJECT_DIR$/views/index.twig" />
-        <option value="$PROJECT_DIR$/Model/AdminQueri.js" />
         <option value="$PROJECT_DIR$/serveur.js" />
+        <option value="$PROJECT_DIR$/Model/AdminQueri.js" />
       </list>
     </option>
   </component>
@@ -241,12 +240,12 @@
       <workItem from="1565669724153" duration="649000" />
       <workItem from="1566206978529" duration="10943000" />
       <workItem from="1566282097110" duration="144000" />
-      <workItem from="1566302785408" duration="2923000" />
+      <workItem from="1566302785408" duration="3156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38785000" />
+    <option name="totallyTimeSpent" value="39018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="221" y="27" width="1061" height="663" extended-state="0" />
@@ -326,13 +325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="226" column="30" lean-forward="true" selection-start-line="226" selection-start-column="30" selection-end-line="226" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/AdminSchM.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -340,10 +332,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AdminQueri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="237" column="42" lean-forward="true" selection-start-line="237" selection-start-column="42" selection-end-line="237" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/serveur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="168">
+          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
         </state>
       </provider>
     </entry>
