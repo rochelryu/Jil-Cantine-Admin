@@ -73,7 +73,7 @@ api.get('/', async (req, res)=>{
             CommandeInWait[i].vraiEle = new Array();
             CommandeInWait[i].plat = await Administration.getPlatWithId(CommandeInWait[i].platId);
             console.log("le contain ", CommandeInWait[i].contain.length)
-            for(let j in CommandeInWait[i].contain){
+            for(let j = 0; j < CommandeInWait[i].contain.length; j++){
                 console.log("le contain ", CommandeInWait[i].contain[j].length , typeof CommandeInWait[i].contain[j],  CommandeInWait[i].contain[j])
                 const Focus = await Administration.getAccompagnementWithId(CommandeInWait[i].contain[j]);
                 console.log("le focus", Focus)
