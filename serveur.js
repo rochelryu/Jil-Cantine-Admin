@@ -72,8 +72,8 @@ api.get('/', async (req, res)=>{
         for(let i in CommandeInWait){
             CommandeInWait[i].plat = await Administration.getPlatWithId(CommandeInWait[i].platId);
             for(let j in CommandeInWait[i].contain){
-                console.log("CommandeInWait[i].contain)", JSON.stringify(CommandeInWait[i].contain[j]))
                 const Focus = await Administration.getAccompagnementWithId(CommandeInWait[i].contain[j]);
+                console.log("celui de focus", Focus);
                 CommandeInWait[i].vraiEle.push(Focus)
             }
             CommandeInWait[i].client = await Administration.getEcoleOfCommande(CommandeInWait[i].CliendId)

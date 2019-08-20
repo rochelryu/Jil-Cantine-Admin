@@ -235,9 +235,10 @@ exports.Administration = class {
         return new Promise(async(next)=>{
             await Accompagnement.findOne({'_id':ObjectID(id)})
                 .then(res=>{
+                    console.log("sa c'est ress sol",err);
                     next(res);
                 }).catch(err=>{
-                    console.log(err);
+                    console.log("sa c'est err",err);
                     next(err);
                 })
         })
