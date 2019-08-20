@@ -237,6 +237,7 @@ exports.Administration = class {
                 .then(res=>{
                     next(res);
                 }).catch(err=>{
+                    console.log(err);
                     next(err);
                 })
         })

@@ -72,6 +72,7 @@ api.get('/', async (req, res)=>{
         for(let i in CommandeInWait){
             CommandeInWait[i].plat = await Administration.getPlatWithId(CommandeInWait[i].platId);
             for(let j in CommandeInWait[i].contain){
+                console.log("CommandeInWait[i].contain)", JSON.stringify(CommandeInWait[i].contain[j]))
                 const Focus = await Administration.getAccompagnementWithId(CommandeInWait[i].contain[j]);
                 CommandeInWait[i].vraiEle.push(Focus)
             }
