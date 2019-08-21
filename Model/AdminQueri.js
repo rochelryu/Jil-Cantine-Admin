@@ -30,7 +30,7 @@ exports.Administration = class {
     static verifyClient(name,password){
         const user = new Date();
         return new Promise(async (next)=>{
-            Client.findOneAndUpdate({name:name, password:password}, {$set:{ "login_date": user }}, {new: true})
+            Client.findOneAndUpdate({numero:name, password:password}, {$set:{ "login_date": user }}, {new: true})
                 .then((res) => {
                     console.log(res);
                     next(res);
