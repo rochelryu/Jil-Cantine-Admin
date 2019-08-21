@@ -23,7 +23,7 @@
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script>
 		function printElem(divId) {
-			var content = document.getElementById(divId).innerHTML;
+			var content = document.getElementById(divId).outerHTML;
 			var mywindow = window.open('', 'Print', 'height=600,width=800');
 
 			mywindow.document.write('<html><head><style>\n' +
@@ -31,6 +31,7 @@
 					'  font-family: arial, sans-serif;\n' +
 					'  border: 1px solid #000;\n' +
 					'  border-collapse: collapse;\n' +
+					'  display: table;\n' +
 					'  width: 100%;\n' +
 					'}\n' +
 					'\n' +

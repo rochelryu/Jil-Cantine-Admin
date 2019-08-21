@@ -67,7 +67,7 @@
 																								<div class="col-sm-8">
 																									<div class="row">
 																										{% for item in info.PlatFixe %}
-                                                                                                        <div class="col-sm-4 alls">
+                                                                                                        <div class="col-sm-4 alls" data-ryu="{{ item.tit }}">
                                                                                                             <span class="tra"><i class="fa fa-trash"></i></span>
                                                                                                             <div class="single_deal">
                                                                                                                 <div class="content fixe" data-toggle="modal" data-target="#fixe{{ item._id }}" style="background: url('images/Fixe/{{ item.url }}') center">
