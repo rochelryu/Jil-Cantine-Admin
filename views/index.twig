@@ -29,6 +29,7 @@
 			mywindow.document.write('<html><head><style>\n' +
 					'table {\n' +
 					'  font-family: arial, sans-serif;\n' +
+					'  border: 1px solid #000;\n' +
 					'  border-collapse: collapse;\n' +
 					'  width: 100%;\n' +
 					'}\n' +
@@ -154,7 +155,7 @@
 															<div class="candile-inner">
 																<h3 class="sub-tittle">Commande En Attente</h3>
 																<button class="btn btn-amber" onclick="printElem('inWait')">Imprimer</button>
-																<table class="display table table-hover table-striped table-bordered" id="inWait" style="width:100%">
+																<table class="display table table-hover table-striped table-bordered" id="inWait" border="1"  style="width:100%">
 																	<thead>
 																	<tr>
 																		<th>N</th>
@@ -196,7 +197,7 @@
 							<div class="candile">
 								<div class="candile-inner">
 									<h3 class="sub-tittle">Commande Validé</h3>
-									<table class="display table table-hover table-striped table-bordered" id="succ" style="width:100%">
+									<table class="display table table-hover table-striped table-bordered" border="1" id="succ" style="width:100%">
 										<thead>
 										<tr>
 											<th>N</th>
@@ -226,7 +227,7 @@
 								<div class="candile-inner">
 									<h3 class="sub-tittle">List des clients </h3>
 									<button class="btn btn-amber" onclick="printElem('listClient')">Imprimer</button>
-									<table class="display table table-hover table-striped table-bordered" id="listClient" style="width:100%">
+									<table class="display table table-hover table-striped table-bordered" border="1" id="listClient" style="width:100%">
 										<thead>
 										<tr>
 											<th>N</th>
