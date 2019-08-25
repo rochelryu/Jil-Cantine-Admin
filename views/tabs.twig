@@ -56,8 +56,9 @@
 																						<ul>
 																							<li><a href="#section-1" class="icon-shop"><i class="lnr lnr-briefcase"></i> <span>FIXE</span></a></li>
 																							<li><a href="#section-2" class="icon-cup"><i class="far fa-calendar"></i> <span>SEMAINE</span></a></li>
-																							<li><a href="#section-3" class="icon-food"><i class="fa fa-utensils"></i> <span>SUPPLEMENTS</span></a></li>
-																							<li><a href="#section-4" class="icon-lab"><i class="fa fa-flask"></i> <span>ACCOMPAGNEMENT</span></a></li>
+																							<li><a href="#section-3" class="icon-food"><i class="fa fa-utensils"></i> <span>SUPPL...</span></a></li>
+																							<li><a href="#section-4" class="icon-lab"><i class="fa fa-pizza-slice"></i> <span>ACCOMP...</span></a></li>
+																							<li><a href="#section-6" class="icon-lab"><i class="fas fa-concierge-bell"></i> <span>CONTENU</span></a></li>
 																							<li><a href="#section-5" class="icon-truck"><i class="fa fa-beer"></i> <span>Boisson</span></a></li>
 																						</ul>
 																					</nav>
@@ -111,6 +112,26 @@
 
                                                                                                                       </div>
                                                                                                                   </div>
+                                                                                                                  <div class="row">
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>Liste des Contenus</h2>
+                                                                                                                                                                                                                                  {% for items in item.accompagement %}
+                                                                                                                                                                                                                                      {% if  items.accomp.etat == 4%}
+                                                                                                                                                                                                                                      <p class="metric">{{items.accomp.name}}</p>
+                                                                                                                                                                                                                                      {% endif %}
+                                                                                                                                                                                                                                  {% endfor %}
+
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>Ajouter Un Contenu</h2>
+                                                                                                                                                                                                                                  <select class="form-control Contenu"  multiple="multiple" style="display: none;">
+                                                                                                                                                                                                                                      {% for item in info.Contenu  %}
+                                                                                                                                                                                                                                          <option value="{{item.name}}">{{item.name}}</option>
+                                                                                                                                                                                                                                      {% endfor %}
+                                                                                                                                                                                                                                  </select>
+
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                          </div>
                                                                                                               </div>
                                                                                                               <div class="modal-footer" data-ryu="{{ item.tit }}">
                                                                                                                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Annuler</button>
@@ -222,6 +243,26 @@
 
                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                           </div>
+                                                                                                                                                                                                                          <div class="row">
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>Liste des Contenus</h2>
+                                                                                                                                                                                                                                  {% for items in item.accompagement %}
+                                                                                                                                                                                                                                      {% if  items.accomp.etat == 4%}
+                                                                                                                                                                                                                                      <p class="metric">{{items.accomp.name}}</p>
+                                                                                                                                                                                                                                      {% endif %}
+                                                                                                                                                                                                                                  {% endfor %}
+
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                              <div class="col-md-6">
+                                                                                                                                                                                                                                  <h2>Ajouter Un Contenu</h2>
+                                                                                                                                                                                                                                  <select class="form-control Contenu"  multiple="multiple" style="display: none;">
+                                                                                                                                                                                                                                      {% for item in info.Contenu %}
+                                                                                                                                                                                                                                          <option value="{{item.name}}">{{item.name}}</option>
+                                                                                                                                                                                                                                      {% endfor %}
+                                                                                                                                                                                                                                  </select>
+
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                          </div>
 
                                                                                                                                                                                                                       </div>
                                                                                                                                                                                                                       <div class="modal-footer" data-ryu="{{ item.tit }}">
@@ -322,13 +363,45 @@
                                                                                                 </div>
                                                                                             </div>
 																						</section>
-																						<section id="section-5">
+																						<section id="section-6">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-8">
+                                                                                                    <div class="row">
+                                                                                                        {% for item in info.Contenu  %}
+                                                                                                            <div class="col-sm-3">
+                                                                                                                <div class="listView" data-ryu="{{ item.name }}">
+                                                                                                                    <span><i class="fas fa-concierge-bell"></i></span>
+                                                                                                                    <span>{{item.name}}</span>
+                                                                                                                <span class="ttra"><i class="fa fa-trash"></i></span>
+                                                                                                                </div>
+
+                                                                                                            </div>
+                                                                                                        {% endfor %}
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <form action="/Contenu" method="post" class="text-center border border-light p-5">
+
+                                                                                                        <p class="h4 mb-4">Ajouter Contenu</p>
+
+                                                                                                        <div class="form-row mb-4">
+                                                                                                            <div class="col">
+                                                                                                                <!-- First name -->
+                                                                                                                <input type="text" name="accomp" class="form-control" placeholder="First name">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <button class="btn btn-dark my-4 btn-block" type="submit">Enregistrer</button>
+                                                                                                    </form>
+                                                                                                </div>
+                                                                                            </div>
+																						</section>
+                                                                                        <section id="section-5">
                                                                                             <div class="row">
                                                                                                 <div class="col-sm-8">
                                                                                                     <div class="row">
                                                                                                         {% for item in info.Boisson  %}
                                                                                                             <div class="col-sm-3">
-                                                                                                                <div class="listView" data-ryu="{{ item.name }}>
+                                                                                                                <div class="listView" data-ryu="{{ item.name }}">
                                                                                                                     <span><i class="fa fa-beer"></i></span>
                                                                                                                     <span>{{item.name}}</span>
                                                                                                                 <span class="ttra"><i class="fa fa-trash"></i></span>
@@ -339,7 +412,7 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                 <div class="col-sm-4">
-                                                                                                    <form action="/boisson" method="post" class="text-center border border-light p-5">
+                                                                                                    <form action="/Boisson" method="post" class="text-center border border-light p-5">
 
                                                                                                         <p class="h4 mb-4">Ajouter Boisson</p>
 
@@ -354,9 +427,9 @@
                                                                                                 </div>
                                                                                             </div>
 																						</section>
-																					</div><!-- /content -->
+																					</div>
 																				</div>
-																				<!-- /tabs -->
+																			
 
 																			</div>
 																			<script src="js/cbpFWTabs.js"></script>
@@ -480,16 +553,21 @@
                                     $(this).parent().fadeOut(1000);
                                 })
                                 $('.SuplementBut').click(function () {
-                                    socket.emit("semaineAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.Accompagnements').val(),Suplement:$(this).parent().parent().find('select.Suplement').val() })
+                                    socket.emit("semaineAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.Accompagnements').val(),Suplement:$(this).parent().parent().find('select.Suplement').val(),Contenu:$(this).parent().parent().find('select.Contenu').val() })
                                     $(this).fadeOut(1700);
-                                    window.location.href = "/cantine";
+                                    setTimeout(()=>{
+                                        window.location.href = "/cantine";
+                                    },1500)
                                     //console.log("supplementSemaine", $('#Accompagnements').val(), $('#Suplement').val())
 
                                 })
                                 $('.SuplementFixeBut').click(function () {
-                                    socket.emit("fixeAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.SuplementFixe').val()})
+                                    socket.emit("fixeAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.SuplementFixe').val(),Contenu:$(this).parent().parent().find('select.Contenu').val()})
                                     $(this).fadeOut(1700);
-                                    window.location.href = "/cantine";
+                                    setTimeout(()=>{
+                                        window.location.href = "/cantine";
+                                    },1500)
+                                
                                     //console.log("supplementSemaine", $('#Accompagnements').val(), $('#Suplement').val())
 
                                 })

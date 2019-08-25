@@ -323,7 +323,7 @@ exports.Administration = class {
                             for(let i in ress){
                                 for (let j in ress[i].accompagement){
                                     console.log(ress[i].accompagement[j]);
-                                    if(ress[i].accompagement[0] && name === ress[i].accompagement[j].accomp.name){
+                                    if(name === ress[i].accompagement[j].accomp.name){
                                         ress[i].accompagement.splice(j,1);
                                     }
                                 }

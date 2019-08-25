@@ -109,12 +109,14 @@ api.get('/cantine', async (req, res)=>{
         const Accompa = await Administration.getAllAccompagnementByType(1);
         const Accompagnement = await Administration.getAllAccompagnementByType(2);
         const Boisson = await Administration.getAllAccompagnementByType(3);
+        const Contenu = await Administration.getAllAccompagnementByType(4);
         const school = await Administration.getSchools();
         info.PlatFixe = PlatFixe;
         info.PlatSemaine = PlatSemaine;
         info.Accompagnement = Accompagnement;
         info.Accompa = Accompa;
         info.Boisson = Boisson;
+        info.Contenu = Contenu;
         info.school = school;
         res.render('tabs.twig',{user: req.session.Pharma, info:info})
     }
@@ -139,6 +141,7 @@ api.post('/accomp', async (req, res)=>{
         let produit = await Administration.setAccompagnement(name,1);
         res.redirect('/cantine')
     }
+    else res.send({err:"tu es bête"});
 })
 api.post('/accompnement', async (req, res)=>{
     if(req.session.Pharma) {
@@ -146,6 +149,7 @@ api.post('/accompnement', async (req, res)=>{
         let produit = await Administration.setAccompagnement(name,2);
         res.redirect('/cantine')
     }
+    else res.send({err:"tu es bête"});
 })
 api.post('/boisson', async (req, res)=>{
     if(req.session.Pharma) {
@@ -153,6 +157,15 @@ api.post('/boisson', async (req, res)=>{
         let produit = await Administration.setAccompagnement(name,  3);
         res.redirect('/cantine')
     }
+    else res.send({err:"tu es bête"});
+})
+api.post('/Contenu', async (req, res)=>{
+    if(req.session.Pharma) {
+        const name = req.body.accomp;
+        let produit = await Administration.setAccompagnement(name,  4);
+        res.redirect('/cantine')
+    }
+    else res.send({err:"tu es bête"});
 })
 api.post('/semaine', uploadFixe, async (req, res)=>{
     const name = req.body.name;
@@ -419,13 +432,20 @@ io.on('connection', (socket)=> {
         for(let j in data.Suplement){
             const update = await Administration.updatePlatAccomp(data.plat, data.Suplement[j]);
         }
+        for(let j in data.Contenu){
+            const update = await Administration.updatePlatAccomp(data.plat, data.Contenu[j]);
+        }
     })
 
     socket.on('fixeAjouComp', async (data)=>{
         for(let i in data.Accompagnement){
             const update = await Administration.updatePlatAccomp(data.plat, data.Accompagnement[i]);
         }
+        for(let j in data.Contenu){
+            const update = await Administration.updatePlatAccomp(data.plat, data.Contenu[j]);
+        }
     });
+    
     socket.on("viewInWait", async data=>{
         let block = [];
 
