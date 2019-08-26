@@ -105,34 +105,14 @@
                                                                                                                       <div class="col-md-6">
                                                                                                                           <h2>Ajouter Un Supplément</h2>
                                                                                                                           <select class="form-control SuplementFixe"  multiple="multiple" style="display: none;">
-                                                                                                                              {% for item in info.Accompa  %}
+                                                                                                                              {% for item in info.Accompa %}
                                                                                                                                   <option value="{{item.name}}">{{item.name}}</option>
                                                                                                                               {% endfor %}
                                                                                                                           </select>
 
                                                                                                                       </div>
                                                                                                                   </div>
-                                                                                                                  <div class="row">
-                                                                                                                                                                                                                              <div class="col-md-6">
-                                                                                                                                                                                                                                  <h2>Liste des Contenus</h2>
-                                                                                                                                                                                                                                  {% for items in item.accompagement %}
-                                                                                                                                                                                                                                      {% if  items.accomp.etat == 4%}
-                                                                                                                                                                                                                                      <p class="metric">{{items.accomp.name}}</p>
-                                                                                                                                                                                                                                      {% endif %}
-                                                                                                                                                                                                                                  {% endfor %}
-
-                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                              <div class="col-md-6">
-                                                                                                                                                                                                                                  <h2>Ajouter Un Contenu</h2>
-                                                                                                                                                                                                                                  <select class="form-control Contenu"  multiple="multiple" style="display: none;">
-                                                                                                                                                                                                                                      {% for item in info.Contenu  %}
-                                                                                                                                                                                                                                          <option value="{{item.name}}">{{item.name}}</option>
-                                                                                                                                                                                                                                      {% endfor %}
-                                                                                                                                                                                                                                  </select>
-
-                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                          </div>
-                                                                                                              </div>
+                                                                                                                  </div>
                                                                                                               <div class="modal-footer" data-ryu="{{ item.tit }}">
                                                                                                                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Annuler</button>
                                                                                                                 <button type="button" class="btn btn-primary btn-sm SuplementFixeBut">Enregister</button>
@@ -562,7 +542,7 @@
 
                                 })
                                 $('.SuplementFixeBut').click(function () {
-                                    socket.emit("fixeAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.SuplementFixe').val(),Contenu:$(this).parent().parent().find('select.Contenu').val()})
+                                    socket.emit("fixeAjouComp", {plat:$(this).parent().attr("data-ryu"), Accompagnement:$(this).parent().parent().find('select.SuplementFixe').val())
                                     $(this).fadeOut(1700);
                                     setTimeout(()=>{
                                         window.location.href = "/cantine";

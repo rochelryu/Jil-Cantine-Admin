@@ -441,9 +441,6 @@ io.on('connection', (socket)=> {
         for(let i in data.Accompagnement){
             const update = await Administration.updatePlatAccomp(data.plat, data.Accompagnement[i]);
         }
-        for(let j in data.Contenu){
-            const update = await Administration.updatePlatAccomp(data.plat, data.Contenu[j]);
-        }
     });
     
     socket.on("viewInWait", async data=>{
