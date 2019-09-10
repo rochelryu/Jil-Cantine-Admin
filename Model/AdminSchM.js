@@ -50,6 +50,10 @@ let ClientSchema = new Schema({
         type:String,
         required: true,
     },
+    classe:{
+        type:String,
+        required: true,
+    },
     numero:{ type: String, required:true},
     password:{type:String,required:true},
     register_date: { type: Date, default: Date.now },

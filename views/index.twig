@@ -163,6 +163,7 @@
 																		<th>Code</th>
 																		<th>nom & prénom</th>
 																		<th>Etablissement</th>
+																		<th>Classe</th>
 																		<th>numero</th>
 																		<th>Commune</th>
 																		<th>Prix</th>
@@ -177,6 +178,7 @@
 																			<td>{{ item.code }}</td>
 																			<td>{{ item.client.name }} {{ item.client.firstname }}</td>
 																			<td>{{ item.client.schoolValue }}</td>
+																			<td>{{ item.client.classe }}</td>
 																			<td>{{ item.client.numero }}</td>
 																			<td>{{ item.client.address }}</td>
 																			<td>{{item.price}} F cfa</td>
@@ -205,7 +207,7 @@
 											<th>Code</th>
 											<th>Prix</th>
                                             <th>Etablissement</th>
-                                            <th>Action</th>
+                                            <th>Classe</th>
 										</tr>
 										</thead>
 										<tbody>
@@ -216,7 +218,7 @@
 												<td>{{ item.code }}</td>
 												<td>{{item.price}} F cfa</td>
 												<td>{{item.ecole.schoolValue}}</td>
-												<td><a class="btn btn-action fake" data-toggle="modal" data-target="#sideModalTR"><i class="far fa-eye"></i></a></td>
+												<td>{{item.ecole.classe}}</td>
 											</tr>
 										{% endfor %}
 										</tbody>
@@ -235,6 +237,7 @@
 											<th>Nom</th>
 											<th>Prenom</th>
 											<th>Etablissement</th>
+											<th>Classe</th>
 											<th>Commune</th>
 											<th>numero</th>
 											<th>Date d'inscription</th>
@@ -248,6 +251,7 @@
 												<td>{{ item.name }}</td>
 												<td>{{item.firstname}}</td>
 												<td>{{item.schoolValue}}</td>
+												<td>{{item.classe}}</td>
 												<td>{{item.address}}</td>
 												<td>{{item.numero}}</td>
 												<td>{{item.register_date|date('d/m/Y H:i')}}</td>

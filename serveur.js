@@ -255,10 +255,11 @@ apiMobile.post('/signin', async (req, res) =>{
         let firstname = req.body.firstname;
         let numero = req.body.numero;
         let commune = req.body.commune;
+        let classe = req.body.classe;
         let schoolValue = req.body.schoolValue;
         let pass = req.body.pass;
         let password = crypto.createHmac('sha256', pass).update('I love cupcakes').digest('hex');
-        let personC = await Administration.setClient(name,firstname,password,numero,schoolValue, commune);
+        let personC = await Administration.setClient(name,firstname,password,numero,schoolValue, commune, classe);
         if (!isErr(personC)){
             req.session.Pharma = personC;
             /*const  expiresIn  =  24  *  60  *  60;
